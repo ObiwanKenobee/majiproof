@@ -1,0 +1,11 @@
+{
+  "routes": [
+    { "path": "/", "title": "Overview" },
+    { "path": "/inspections", "title": "Inspections" },
+    { "path": "/inspections/new", "title": "New inspection" },
+    { "path": "/inspections/:id", "title": "Inspection workspace" },
+    { "path": "/reports", "title": "Reports" },
+    { "path": "/settings", "title": "Settings" },
+    { "path": "/developer/models", "title": "Developer model evaluation" }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "title": "MajiProof empty inspection benchmark template",
+  "status": "unpopulated",
+  "slotCount": 10,
+  "records": [],
+  "requiredFields": [
+    "image",
+    "stage",
+    "promptVersion",
+    "providerId",
+    "modelId",
+    "humanLabels",
+    "humanRatings"
+  ]
+}
