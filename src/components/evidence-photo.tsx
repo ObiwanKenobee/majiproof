@@ -23,10 +23,9 @@ export function EvidencePhoto({ blob, label, segmentations = [], showOverlay = f
   useEffect(() => {
     const image = imageRef.current;
     const canvas = canvasRef.current;
-    if (!image || !canvas || !image.complete || !image.naturalWidth || !image.naturalHeight) return;
+    if (!image || !canvas || !ratio || !image.naturalWidth || !image.naturalHeight) return;
     canvas.width = image.naturalWidth;
     canvas.height = image.naturalHeight;
-    setRatio(image.naturalWidth / image.naturalHeight);
     const context = canvas.getContext("2d");
     if (!context) return;
     context.clearRect(0, 0, canvas.width, canvas.height);

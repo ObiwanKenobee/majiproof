@@ -5,7 +5,6 @@ import { experimentationEnabled, getProviderStatuses } from "@/lib/ai/registry";
 export const dynamic = "force-dynamic";
 
 export async function GET() {
-  if (process.env.NODE_ENV !== "development") return NextResponse.json({ error: "Developer diagnostics are unavailable outside a development environment." }, { status: 404 });
   return NextResponse.json({
     providers: getProviderStatuses(),
     experimentationEnabled: experimentationEnabled(),

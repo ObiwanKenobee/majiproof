@@ -52,11 +52,11 @@ export default function SettingsPage() {
         <div className="setting-row"><div><strong>Location collection</strong><small>No GPS is required or requested</small></div><span className="setting-state is-ready"><i />Not used</span></div>
         <div className="setting-row"><div><strong>Personal identity</strong><small>No login or personal identity is required</small></div><span className="setting-state is-ready"><i />Not required</span></div>
       </section>
-      {process.env.NODE_ENV === "development" && <section className="settings-panel developer-tools-panel">
+      <section className="settings-panel developer-tools-panel">
         <h2><ShieldCheck size={14} style={{ verticalAlign: "-2px", marginRight: 7 }} />Developer tools</h2>
-        <p>Explicit model evaluation is separate from the field inspection workflow and is available only in a development environment.</p>
+        <p>Explicit model evaluation is separate from the field inspection workflow. Provider selection and benchmark runs are not part of the ordinary field workflow.</p>
         <Link className="btn btn-secondary btn-small" href="/developer/models">Open model evaluation workbench</Link>
-      </section>}
+      </section>
     </div>
   </>;
 }

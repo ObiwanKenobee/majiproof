@@ -13,8 +13,7 @@ export const runtime = "nodejs";
 export const maxDuration = 120;
 
 export async function POST(request: Request) {
-  if (process.env.NODE_ENV !== "development") return NextResponse.json({ error: "Model evaluation is available only in a development environment." }, { status: 404 });
-  if (!experimentationEnabled()) return NextResponse.json({ error: "Experiments are disabled. Set MAJIPROOF_EXPERIMENTATION_ENABLED=true in the development environment to opt in." }, { status: 403 });
+  if (!experimentationEnabled()) return NextResponse.json({ error: "Model evaluation is disabled. Set MAJIPROOF_EXPERIMENTATION_ENABLED=true to opt in to explicit provider evaluation." }, { status: 403 });
   const limited = rateLimit(request, "developer-evaluate");
   if (limited) return limited;
 
